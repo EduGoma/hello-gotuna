@@ -10,7 +10,9 @@ pipeline {
         }
         stage('Start') {
             steps {
-                sh 'docker-compose up -d'
+                timestamps{
+                    sh 'docker-compose up -d'
+                }
             }
         }
     } 
