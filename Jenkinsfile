@@ -2,21 +2,18 @@ pipeline {
     agent any
    options {
       ansiColor('xterm')
+       timestamps{}
    }
     stages { 
         stage('Build') {
             steps {
-                timestamps{
-                        sh 'docker-compose build'
-                        echo 'prueba de colores'
-                }
+                sh 'docker-compose build'
+                echo 'prueba de colores'
             }
         }
         stage('Start') {
             steps {
-                timestamps{
-                    sh 'docker-compose up -d'
-                }
+                sh 'docker-compose up -d'
             }
         }
     } 
