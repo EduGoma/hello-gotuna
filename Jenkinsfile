@@ -1,12 +1,15 @@
 pipeline {
     agent any
+   options {
+      ansiColor('xterm')
+   }
     stages { 
         stage('Build') {
             steps {
                 timestamps{
-                    ansiColor('css') {
+                    \\ ansiColor('css') {
                         sh 'docker-compose build'
-                    }
+                    \\}
                 }
             }
         }
