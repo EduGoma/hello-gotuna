@@ -3,7 +3,9 @@ pipeline {
     stages { 
         stage('Build') {
             steps {
-                sh 'docker-compose build'
+                timestamps{
+                    sh 'docker-compose build'
+                }
             }
         }
         stage('Start') {
