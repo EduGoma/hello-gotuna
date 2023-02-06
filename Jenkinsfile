@@ -7,9 +7,9 @@ pipeline {
         stage('Build') {
             steps {
                 timestamps{
-                    \\ ansiColor('css') {
+                    # ansiColor('css') {
                         sh 'docker-compose build'
-                    \\}
+                    #}
                 }
             }
         }
