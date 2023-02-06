@@ -8,7 +8,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'docker-compose build'
-                echo 'prueba de colores'
             }
         }
         stage('Start') {
